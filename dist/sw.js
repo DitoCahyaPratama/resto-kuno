@@ -22,9 +22,7 @@ var serviceWorkerOption = {
     "/images/drinks.png",
     "/images/foods.png",
     "/images/placeholder.jpg",
-    "/images/heros/hero-image_1.jpg",
     "/images/heros/hero-image_2.jpg",
-    "/images/heros/hero-image_3.jpg",
     "/images/heros/hero-image_4.jpg",
     "/index.html"
   ]

@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -33,7 +33,7 @@ module.exports = merge(common, {
       ],
       overrideExtension: true,
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',

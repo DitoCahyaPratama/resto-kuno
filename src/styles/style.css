@@ -13,7 +13,7 @@ body, html {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #424242;
 }
 
@@ -124,7 +124,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: green;
+    background-color: #0a222f;
     filter: grayscale(20%);
 }
 
@@ -297,7 +297,6 @@ main {
 
 .latest p{
     font-size: 14px;
-    padding: 8px;
 }
 
 .latest p::after {
@@ -397,7 +396,7 @@ main {
 }
 
 .post-item__title:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .post-item__title{
@@ -408,12 +407,11 @@ main {
 .post-item__description {
     margin-top: 16px;
     font-size: 14px;
-    line-height: 2em;
     overflow: hidden;
+    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 .list-menu__container {
@@ -613,17 +611,17 @@ Like
     margin-top: 25vh;
 }
 
+.lazyload {
+    background-color: #666666;
+    height: 100%;
+}
+  
 .skeleton {
     user-select: none;
     background-color: #eeeeee;
     color: #eeeeee;
 }
 
-.lazyload {
-    background-color: #666666;
-    height: 100%;
-}
-  
 .input-group {
     width: 100%;
     margin-top: 10px;

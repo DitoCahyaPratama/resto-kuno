@@ -88,7 +88,7 @@ const getStarRating = (rating) => {
 };
 
 const createRestaurantDetailTemplate = (restaurant) => `
-<div class="hero__detail" style="background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url('${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.restaurant.pictureId}')">
+<div class="hero__detail lazyload" style="background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url('${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.restaurant.pictureId}')">
         <div class="hero__inner">
             <h1 class="hero__title">${restaurant.restaurant.name}</h1>
             <p class="hero__tag">Kategori: ${getCategorie(restaurant.restaurant.categories)}</p>
@@ -121,7 +121,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
     <article class='post-item' key=${restaurant.id}>
-      <div>
+      <div class='post-item__top'>
         <div class='post-item__tag'>
           <button class='post-item__tag__city'>Kota, ${restaurant.city}</button>
           <button class='post-item__tag__rating'>Rating: ${restaurant.rating}</button>
@@ -133,7 +133,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       </div>
       <div class='post-item__content'>
         <a class='post-item__title' href='${`/#/detail/${restaurant.id}`}' class='post-item__link' rel='noreferrer'>${restaurant.name || '-'}</a>
-        <p class='post-item__description'> ${restaurant.description || '-'}</p>
+        <p class='post-item__description'> ${restaurant.description || '-'} ...</p>
       </div>
     </article>
 `;

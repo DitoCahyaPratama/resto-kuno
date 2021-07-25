@@ -44,6 +44,10 @@
     .list-menu__container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url("/images/heros/hero-image_4-small.jpg");  
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -111,6 +115,9 @@
     .nav__item:hover {
         background-color: #323330;
     }
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url("/images/heros/hero-image_4.webp");  
+    }
 }
 
 @media screen and (min-width: 701px) {
@@ -165,5 +172,8 @@
     }
     .list-menu__container {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url("/images/heros/hero-image_4-large.jpg");
     }
 }

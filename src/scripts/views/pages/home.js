@@ -15,7 +15,7 @@ const Home = {
             <figure class="headline__figure">
                 <source type="image/webp" media="(max-width: 600px)" srcset="./images/heros/hero-image_2.webp">
                 <source type="image/jpeg" media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
-                <img src="../images/heros/hero-image_2-large.jpg" alt="About Resto Kuno">
+                <img src="../images/heros/hero-image_2.webp" alt="About Resto Kuno">
                 <figcaption>Resto Kuno April 2021</figcaption>
             </figure>
             <div class="headline__content">

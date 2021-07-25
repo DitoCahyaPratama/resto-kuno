@@ -107,11 +107,12 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-
-    background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url("/images/heros/hero-image_4.jpg");
     background-position: center;
     background-color: green;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: grayscale(20%);
+    background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url("/images/heros/hero-image_4-large.jpg");
 }
 
 .hero__detail{

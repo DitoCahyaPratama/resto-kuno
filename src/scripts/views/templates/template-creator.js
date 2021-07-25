@@ -33,7 +33,7 @@ const getMenuFoods = (restaurant) => {
   restaurant.forEach((menu) => {
     menus += `
         <div class="list-menu__restaurant">
-          <img class="list-menu__picture lazyload" src="${CONFIG.IMAGE_DEFAULT_FOOD_URL}" alt="Minuman ${menu.name}">
+          <img class="list-menu__picture lazyload" data-src="${CONFIG.IMAGE_DEFAULT_FOOD_URL}" alt="Minuman ${menu.name}">
           <div class="list-menu__name">
             <h3>${menu.name}</h3>
           </div>
@@ -48,7 +48,7 @@ const getMenuDrinks = (restaurant) => {
   restaurant.forEach((menu) => {
     menus += `
       <div class="list-menu__restaurant">
-        <img class="list-menu__picture lazyload" src="${CONFIG.IMAGE_DEFAULT_DRINK_URL}" alt="Minuman ${menu.name}">
+        <img class="list-menu__picture lazyload" data-src="${CONFIG.IMAGE_DEFAULT_DRINK_URL}" alt="Minuman ${menu.name}">
         <div class="list-menu__name">
           <h3>${menu.name}</h3>
         </div>
@@ -88,7 +88,18 @@ const getStarRating = (rating) => {
 };
 
 const createRestaurantDetailTemplate = (restaurant) => `
-<div class="hero__detail lazyload" style="background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url('${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.restaurant.pictureId}')">
+<div class="hero__detail lazyload" style="
+  background-image: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 100, 0.5)), url('${CONFIG.BASE_IMAGE_LARGE_URL + restaurant.restaurant.pictureId}');
+  background-image: 
+    -webkit-image-set(
+      url('${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.restaurant.pictureId}') 1x,
+      url('${CONFIG.BASE_IMAGE_MEDIUM_URL + restaurant.restaurant.pictureId}') 2x,
+    );
+  background-image: 
+    image-set(
+      url('${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.restaurant.pictureId}') 1x,
+      url('${CONFIG.BASE_IMAGE_MEDIUM_URL + restaurant.restaurant.pictureId}') 2x,
+    );">
         <div class="hero__inner">
             <h1 class="hero__title">${restaurant.restaurant.name}</h1>
             <p class="hero__tag">Kategori: ${getCategorie(restaurant.restaurant.categories)}</p>
@@ -128,7 +139,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
           
         <img class='post-item__thumbnail lazyload'
-          src='${restaurant.pictureId ? CONFIG.BASE_IMAGE_SMALL_URL + restaurant.pictureId : 'https://i.picsum.photos/id/666/800/450.jpg?grayscale&hmac=cijtLqs6SMxlZEcOinrh0ZHckTRMJXWjJc-ithauWk0'}'
+          data-src='${restaurant.pictureId ? CONFIG.BASE_IMAGE_SMALL_URL + restaurant.pictureId : 'https://i.picsum.photos/id/666/800/450.jpg?grayscale&hmac=cijtLqs6SMxlZEcOinrh0ZHckTRMJXWjJc-ithauWk0'}'
           alt='Restaurant ${restaurant.name}'>
       </div>
       <div class='post-item__content'>

@@ -10,6 +10,7 @@ var serviceWorkerOption = {
     "/7.bundle.js",
     "/bundle.js",
     "/favicon.png",
+    "/fontawesome-webfont.woff2",
     "/manifest.json",
     "/icons/icon-128x128.png",
     "/icons/icon-144x144.png",

@@ -190,6 +190,7 @@ main {
 
 .headline__figure img {
     width: 100%;
+    object-fit: cover;
 }
 
 .headline__figure figcaption {
@@ -313,6 +314,10 @@ main {
     padding: 8px;
 }
 
+.latest__description{
+    padding: 8px;
+}
+
 /*
  * post
  */
@@ -403,10 +408,11 @@ main {
 .post-item__title{
     text-decoration: none;
     color: inherit;
+    padding: 20px 0;
 }
 
 .post-item__description {
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -673,4 +679,12 @@ input#query {
     background-color: #2c3e50;
     padding: 20px;
     outline: none;
+}
+
+.fa-search::before {
+    padding: 14px;
+}
+
+.post-item__not__found{
+    padding: 20px 0;
 }

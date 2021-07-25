@@ -121,7 +121,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </article>
     <div class="latest">
       <h1 class="latest__label">List Menu</h1>
-      <p>Terdapat makanan dan minuman yang berkualitas</p>
+      <p class="latest__description">Terdapat makanan dan minuman yang berkualitas</p>
     </div>
     <div class="list-menu__container">
         ${getMenuFoods(restaurant.restaurant.menus.foods)}
@@ -164,7 +164,7 @@ const createUnlikeRestaurantButtonTemplate = () => `
 const createRestaurantDetailReviewTemplate = (restaurant) => `
   <div class="latest">
     <h1 class="latest__label">Review</h1>
-    <p>Berikut review mengenai restoran ini dari pelanggan</p>
+    <p class="latest__description">Berikut review mengenai restoran ini dari pelanggan</p>
   </div>
   <div class="review__container">
       ${getReviews(restaurant.restaurant.customerReviews)}

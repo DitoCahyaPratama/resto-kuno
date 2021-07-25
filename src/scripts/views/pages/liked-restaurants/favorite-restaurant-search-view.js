@@ -12,7 +12,6 @@ class FavoriteRestaurantSearchView {
                       <input id="query" type="text" placeholder="Find favorite restaurant">
                     </div>
                     <div id="posts" class="posts">
-
                     </div>
                   </div>
               </div>   

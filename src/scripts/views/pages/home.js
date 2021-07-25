@@ -15,7 +15,7 @@ const Home = {
             <figure class="headline__figure">
                 <source type="image/webp" media="(max-width: 600px)" srcset="./images/heros/hero-image_2.webp">
                 <source type="image/jpeg" media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
-                <img src="../images/heros/hero-image_2.webp" alt="About Resto Kuno">
+                <img src="../images/heros/hero-image_2.webp" width="480px" height="320px" alt="About Resto Kuno">
                 <figcaption>Resto Kuno April 2021</figcaption>
             </figure>
             <div class="headline__content">
@@ -29,7 +29,7 @@ const Home = {
         </article>
         <div class="latest">
             <h1 class="latest__label">Jelajahi lebih lanjut</h1>
-            <p>Resto Kuno sudah tersebar di berbagai daerah</p>
+            <p class="latest__description">Resto Kuno sudah tersebar di berbagai daerah</p>
             <div id="posts" class="posts">
               ${createSkeletonRestaurantTemplate(20)}
             </div>

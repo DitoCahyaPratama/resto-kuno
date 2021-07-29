@@ -11,13 +11,13 @@ const Like = {
   },
 
   async afterRender() {
-    let scriptElement = document.querySelector('script[src="https://use.fontawesome.com/b070c8f1df.js"]');
+    // let scriptElement = document.querySelector('script[src="https://use.fontawesome.com/b070c8f1df.js"]');
 
-    if (!scriptElement) {
-      scriptElement = document.createElement('script');
-      scriptElement.src = 'https://use.fontawesome.com/b070c8f1df.js';
-      document.body.appendChild(scriptElement);
-    }
+    // if (!scriptElement) {
+    //   scriptElement = document.createElement('script');
+    //   scriptElement.src = 'https://use.fontawesome.com/b070c8f1df.js';
+    //   document.body.appendChild(scriptElement);
+    // }
 
     new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
     new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
